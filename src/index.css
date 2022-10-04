@@ -11,3 +11,98 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.root {
+  max-width: 1280px;
+  width: 100%;
+  min-width: 288px;
+  margin: 0 auto;
+}
+
+.header {
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.header__logo {
+  width: 182px;
+  height: 31px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.profile {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  box-sizing: border-box;
+
+}
+
+.profile__pic {
+  width: 80px;
+  height: 80px;
+  margin-right: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.gallery {
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+
+}
+
+.gallery__list {
+  margin: 0 auto;
+  padding: 0;
+  width: fit-content;
+  display: grid;
+  grid: auto / repeat(3, 200px);
+  gap: 16px 24px;
+}
+
+.grid__item {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.card {
+  display: flex;
+  flex-flow: column;
+  justify-content: start;
+  align-items: start;
+  border-radius: 10px;
+  background: gainsboro;
+  overflow: hidden;
+}
+
+.card__pic {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  object-position: center;
+}
+.card__title {
+  margin: 10px 20px;
+  padding: 0;
+}
+
+.card__desc {
+  margin: 0 20px 30px 20px;
+  padding: 0;
+}
+
+.footer {
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+
+
+}
