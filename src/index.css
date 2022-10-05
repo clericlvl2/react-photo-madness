@@ -51,6 +51,24 @@ code {
   object-position: center;
 }
 
+.stories {
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, .5);
+}
+.stories__container {
+
+}
+
+.stories_opened {
+  display: flex;
+}
+
 .gallery {
   width: 100%;
   padding: 20px;

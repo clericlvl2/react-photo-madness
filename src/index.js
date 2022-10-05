@@ -4,6 +4,7 @@ import './index.css';
 import logo from './images/logo.png';
 import userPic from './images/monkey.jpg';
 import mockCardImage from './images/kick-scooter.jpg';
+import { mockStories } from "./constants";
 
 
 class Header extends React.Component {
@@ -22,17 +23,70 @@ class Header extends React.Component {
 class Profile extends React.Component {
     constructor(props) {
         super(props);
-    }
+        this.state = {
+            isStoriesOpen: false,
+        }
 
+    }
+    toggleStories() {
+        const currentState = this.state.isStoriesOpen;
+        this.setState({
+            isStoriesOpen: !currentState,
+        });
+    }
     render() {
         return (
             <section className='profile'>
                     <img className='profile__pic'
                          src={userPic}
                          alt="user-picture"
-                         onClick={() => {}} // TODO add stories
+                         onClick={() => this.toggleStories()}
                     />
                     <h2 className='profile__username'>Mr. Stranger</h2>
+            </section>
+        )
+    }
+}
+
+class StoriesWindow extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            isStoriesOpen: props.isOpen,
+        }
+
+    }
+    prevStory() {
+        return;
+    }
+    nextStory() {
+        return;
+    }
+    renderStory() {
+        return (
+            <img className="stories__story" src="." alt=""/>
+        )
+    }
+    render() {
+        console.log(this.state.isStoriesOpen);
+
+        // if (!this.state.isStoriesOpen) {
+        //     return;
+        // }
+        // const currentStory = this.renderStory();
+        return (
+            <section className='stories'>
+                <div className="stories__container">
+                    {/*<button*/}
+                    {/*    className="stories__btn-prev"*/}
+                    {/*    onClick={() => this.prevStory()}*/}
+                    {/*></button>*/}
+                    {/*{currentStory}*/}
+                    {/*<button*/}
+                    {/*    className="stories__btn-next"*/}
+                    {/*    onClick={() => this.nextStory()}*/}
+                    {/*></button>*/}
+                </div>
             </section>
         )
     }
@@ -70,16 +124,8 @@ class Gallery extends React.Component {
     }
 }
 
-class StoriesWindow extends React.Component {
-    constructor(props) {
-        super(props);
-    }
-    render() {
-        return (
-            <section></section>
-        )
-    }
-}
+
+
 
 class Main extends React.Component {
     constructor(props) {
@@ -119,6 +165,9 @@ class PhotoApp extends React.Component {
                 <Header />
                 <Main />
                 <Footer />
+                <StoriesWindow
+                    isOpen={this.state.isStoriesOpen}
+                />
             </>
         )
     }
