@@ -1,0 +1,33 @@
+.profile {
+    width: 100%;
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 20px 20px 0 20px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    box-sizing: border-box;
+
+}
+
+.profile__pic-container {
+    width: 84px;
+    height: 84px;
+    margin-right: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: none;
+    background-color: cornflowerblue;
+    cursor: pointer;
+}
+
+.profile__pic {
+    width: 70px;
+    height: 70px;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+}
