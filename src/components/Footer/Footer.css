@@ -1,0 +1,9 @@
+.footer {
+    width: 100%;
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    background-color: rgba(176, 196, 222, 0.3);
+}
