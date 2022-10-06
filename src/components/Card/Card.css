@@ -1,0 +1,26 @@
+.card {
+    display: flex;
+    flex-flow: column;
+    justify-content: start;
+    align-items: start;
+    border-radius: 10px;
+    background: gainsboro;
+    overflow: hidden;
+}
+
+.card__pic {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.card__title {
+    margin: 10px 20px;
+    padding: 0;
+}
+
+.card__desc {
+    margin: 0 20px 30px 20px;
+    padding: 0;
+}
