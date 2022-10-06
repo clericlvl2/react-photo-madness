@@ -1,0 +1,66 @@
+.stories {
+    position: fixed;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, .8);
+}
+
+.stories__container {
+    display: grid;
+    width: 80vw;
+    height: 60vh;
+    grid: auto / 1fr 4fr 1fr;
+}
+
+.stories__image {
+    width: 100%;
+    max-height: 60vh;
+    object-position: center;
+    object-fit: cover;
+}
+
+.stories__btn {
+    margin: 0;
+    padding: 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.stories__btn-next {
+    background: url('./../../assets/images/arrow-next.svg') center no-repeat;
+    background-size: 55px 55px;
+    filter: invert(89%) sepia(95%) saturate(0%) hue-rotate(60deg) brightness(108%) contrast(104%);
+}
+
+.stories__btn-next:hover {
+    background-color: rgba(255, 255, 255, .4);
+}
+
+.stories__btn-prev {
+    background: url('./../../assets/images/arrow-back.svg') center no-repeat;
+    background-size: 55px 55px;
+    filter: invert(89%) sepia(95%) saturate(0%) hue-rotate(60deg) brightness(108%) contrast(104%);
+}
+
+.stories__btn-prev:hover {
+    background-color: rgba(255, 255, 255, .4);
+}
+
+.stories__btn-exit {
+    position: absolute;
+    width: 33px;
+    height: 33px;
+    top: 50px;
+    right: 50px;
+    background: url('./../../assets/images/close-icon.svg') center no-repeat;
+    background-size: 33px 33px;
+}
+
+.stories__btn-exit:hover {
+    opacity: .6;
+}
